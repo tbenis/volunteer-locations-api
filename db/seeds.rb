@@ -6,22 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require "faker"
-
-# timeNow = Time.new
-# dateToday = Date.today
-
-# time.strftime("%d/%m/%Y")        # "05/12/2015"
-# time.strftime("%I:%M %p")        # "11:04 PM"
-
-
 def categoryCreator(name)
     category = Category.create(name: name)
     category.save
 end
-
-# c1 = Category.create(name: "Women's Empowerment")
-# c1.save
 
 categoryCreator("Women's Empowerment")
 categoryCreator("Computer and Technology")
