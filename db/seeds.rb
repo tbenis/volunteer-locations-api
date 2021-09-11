@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Seed data  taken from https://www.volunteermatch.org/
+
 def categoryCreator(name)
     category = Category.create(name: name)
     category.save

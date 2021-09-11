@@ -4,7 +4,6 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities
   def index
     @opportunities = Opportunity.all
-
     render json: @opportunities
   end
 
@@ -35,7 +34,11 @@ class OpportunitiesController < ApplicationController
 
   # DELETE /opportunities/1
   def destroy
-    @opportunity.destroy
+    if @opportunity.destroy
+      render json: {message: "Opportunity successfully destroyed"}
+    else
+      render json: {message: "Something went wrong! Errors: #{@opportunity.errors.full_messages}"}
+    end
   end
 
   private

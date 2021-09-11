@@ -26,6 +26,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "rack-cors"
 
 gem 'fast_jsonapi'
+gem 'active_model_serializers'
 
 gem 'faker'
 
